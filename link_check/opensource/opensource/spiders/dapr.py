@@ -1,12 +1,12 @@
 import scrapy
-from scrapy.spiders import logging
+import logging
 from opensource.common.utils import should_ignore
 
 
-class CloudwegoSpider(scrapy.Spider):
-    name = "cloudwego"
-    allowed_domains = ["www.cloudwego.io"]
-    start_urls = ["https://www.cloudwego.io"]
+class DaprSpider(scrapy.Spider):
+    name = "dapr"
+    allowed_domains = ["docs.dapr.io"]
+    start_urls = ["https://docs.dapr.io"]
 
     def parse(self, response):
         if response.status >= 400:
